@@ -91,7 +91,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  KalmanInit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,6 +101,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    HAL_GPIO_TogglePin(GPIOC , GPIO_PIN_13);
+    HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
